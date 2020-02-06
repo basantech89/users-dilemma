@@ -1,0 +1,20 @@
+{
+  "private": true,
+  "name": "users-dilemma",
+  "version": "1.0.0",
+  "main": "index.js",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "client": "yarn workspace frontend start",
+    "server": "yarn workspace backend dev",
+    "start": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "author": "Basant Soni",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.0.2"
+  }
+}
